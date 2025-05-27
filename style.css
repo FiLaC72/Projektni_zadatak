@@ -1,1 +1,35 @@
+header{
+    text-align: center;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNvtFScewCnVMZJHYphHxrk0eA8D6Yo95bSQ&s');
+    background-repeat: no-repeat;
+    background-position: 50% 50%; 
+    width: 100%;
+    height: 30vh;
+}
+footer{
+    text-align: center;
+    background-color: grey;
+    width: 100%;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 1vh;
+}
+head, body{
+    min-height: 100vh;
+}
+.clickable-box {
+  display: block;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.3s ease;
+}
 
+.clickable-box:hover {
+  background-color: #e2e6ea;
+}
