@@ -2,91 +2,42 @@
 <html lang="hr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OPG Višnje Svevišnje</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hrvački klub Lika</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Zaglavlje -->
-    <header class="bg-warning p-3 d-flex justify-content-between align-items-center">
-        <div class="logo d-flex align-items-center">
-            <img src="../img/logo.png" alt="Logo" style="width: 50px; height: 50px;">
-            <h1 class="ms-2">OPG Višnje Svevišnje</h1>
-        </div>
-        <nav>
-            <ul class="nav">
-                <li class="nav-item"><a class="nav-link" href="index.html">Naslovna</a></li>
-                <li class="nav-item"><a class="nav-link" href="proizvodi.html">Proizvodi</a></li>
-                <li class="nav-item"><a class="nav-link" href="lokacija.html">Lokacija</a></li>
-                <li class="nav-item"><a class="nav-link" href="savjeti.html">Savjeti</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="container mt-5">
+        <header class="mb-4">
+            <h1 class="text-center"></h1>
+        </header>
 
-    <!-- Carousel -->
-    <section id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="../img/slide1.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="../img/slide2.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="../img/slide3.jpg" class="d-block w-100" alt="...">
+        <div class="row g-3">
+            <div class="col-md-4">
+                <a href="treninzi.html" class="clickable-box"><b>Termini treninga</b></a>
+            </div><br>
+            <div class="col-md-4">
+                <a href="kontakti.html" class="clickable-box"><b>Kontakti trenera</b></a>
+            </div><br>
+            <div class="col-md-4">
+                <a href="oprema.html" class="clickable-box"><b>Potrebna oprema</b></a>
+            </div><br>
+            <div class="col-md-4">
+                <a href="stranica4.html" class="clickable-box">Kolona 4</a>
+            </div><br>
+            <div class="col-md-4">
+                <a href="stranica5.html" class="clickable-box">Kolona 5</a>
+            </div><br>
+            <div class="col-md-4">
+                <a href="stranica6.html" class="clickable-box">Kolona 6</a>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Prethodno</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Sljedeće</span>
-        </button>
-    </section>
 
-    <!-- Kartice proizvoda -->
-    <section class="container mt-4">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-            <div class="col">
-                <div class="card">
-                    <img src="../img/product1.jpg" class="card-img-top" alt="Proizvod 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Proizvod 1</h5>
-                        <p class="card-text">Snižena cijena: 10€</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="../img/product2.jpg" class="card-img-top" alt="Proizvod 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Proizvod 2</h5>
-                        <p class="card-text">Snižena cijena: 15€</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="../img/product3.jpg" class="card-img-top" alt="Proizvod 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Proizvod 3</h5>
-                        <p class="card-text">Snižena cijena: 20€</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Podnožje -->
-    <footer class="bg-dark text-white text-center p-3 mt-4">
-        <p>Kontakt telefon: +385 98 123 4567</p>
-        <p>Radno vrijeme: Pon-Pet 08:00 - 16:00</p>
-        <p>Načini plaćanja: Gotovina, Kartice</p>
-        <p>Pratite nas: <a href="#" class="text-white">Facebook</a>, <a href="#" class="text-white">Instagram</a>, <a href="#" class="text-white">Twitter</a></p>
-    </footer>
+        <footer class="mt-4 text-center">
+            <p>&copy; Patrik Dujmović i Martin Filajdić</p>
+        </footer>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
