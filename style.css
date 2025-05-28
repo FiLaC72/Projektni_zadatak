@@ -1,6 +1,6 @@
 header{
-    text-align: center;
     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNvtFScewCnVMZJHYphHxrk0eA8D6Yo95bSQ&s');
+    text-align: center;
     background-repeat: no-repeat;
     background-position: 50% 50%; 
     width: 100%;
@@ -8,17 +8,16 @@ header{
 }
 footer{
     text-align: center;
-    background-color: grey;
+    background-color: pink;
     width: 100%;
     color: black;
-    display: flex;
     flex-direction: column;
     min-height: 1vh;
 }
 head, body{
     min-height: 100vh;
 }
-.clickable-box {
+.gumb-kutija {
   display: block;
   padding: 2rem;
   background-color: #f8f9fa;
@@ -29,7 +28,34 @@ head, body{
   color: inherit;
   transition: background-color 0.3s ease;
 }
+.gumb-kutija-1 {
+  display: block;
+  padding: 0,5rem;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.3s ease;
+}
 
-.clickable-box:hover {
+.gumb-kutija:hover {
   background-color: #e2e6ea;
+}
+
+.gumb-kutija-1:hover {
+  background-color: #e2e6ea;
+}
+.tablica {
+  margin: 30px auto;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+.tablica th,
+.tablica td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
 }
