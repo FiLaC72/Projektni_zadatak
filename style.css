@@ -18,15 +18,17 @@ head, body{
     min-height: 100vh;
 }
 .gumb-kutija {
-  display: block;
-  padding: 2rem;
-  background-color: #f8f9fa;
-  border: 1px solid #dee2e6;
-  border-radius: 0.5rem;
-  text-align: center;
-  text-decoration: none;
-  color: inherit;
-  transition: background-color 0.3s ease;
+  background-image: url('https://i0.wp.com/www.win-magazine.com/wp-content/uploads/2013/12/zwHy8.AuSt_.42.jpeg?fit=620%2C412&ssl=1'); /* Slika iz Unsplash */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  height: 300px;
+  width: 100%;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
 }
 .gumb-kutija-1 {
   display: block;
@@ -41,7 +43,7 @@ head, body{
 }
 
 .gumb-kutija:hover {
-  background-color: #e2e6ea;
+  opacity: 0.9;
 }
 
 .gumb-kutija-1:hover {
@@ -57,5 +59,9 @@ head, body{
 .tablica td {
   border: 1px solid black;
   padding: 10px;
+  text-align: center;
+}
+
+caption{
   text-align: center;
 }
