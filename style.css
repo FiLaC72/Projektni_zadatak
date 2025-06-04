@@ -20,19 +20,22 @@ header {
   transition: background 0.3s;
 }
 .nav-link:hover {
+  color: #EB3D00;
   background-color: #f1f1f1;
   border-radius: 0.5rem;
 }
 
 /* Footer (ostaje kao prije) */
-.footer {
-  flex-shrink: 0;
+footer {
   background-color: pink;
   color: black;
   text-align: center;
-  padding: 10px 0;
+  padding: 5px 0;
+  font-size: 0.9rem;
   width: 100%;
+  margin-top: auto;
 }
+
 
 head, body{
   min-height: 100vh;
