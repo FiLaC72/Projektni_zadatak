@@ -1,37 +1,77 @@
 const questions = [
     {
+        type: "multiple",
         question: "Koji je osnovni cilj u hrvanju?",
         options: ["Pobjeći iz kruga", "Srušiti protivnika na pod i kontrolirati ga", "Udaranje protivnika", "Pogađanje ciljeva"],
         answer: 1
     },
     {
+        type: "multiple",
         question: "Koliko traje jedna runda u hrvanju (za mlađe uzraste)?",
         options: ["1 minuta", "2 minute", "3 minute", "5 minuta"],
         answer: 1
     },
     {
+        type: "multiple",
         question: "Koje od navedenog NIJE dio hrvačke opreme?",
         options: ["Hrvačke tenisice", "Dres", "Boksačke rukavice", "Znojnik"],
         answer: 2
+    },
+    {
+        type: "truefalse",
+        question: "Hrvanje je kontaktni sport.",
+        answer: true
+    },
+    {
+        type: "truefalse",
+        question: "U hrvanju je dozvoljeno udaranje protivnika.",
+        answer: false
+    },
+    {
+        type: "text",
+        question: "Kako se zove prostor u kojem se održavaju hrvačka natjecanja (jednom riječju)?",
+        answer: "strunjača"
+    },
+    {
+        type: "text",
+        question: "Kako se zove završna tehnika kojom hrvač može pobijediti meč bez bodova?",
+        answer: "tuš"
     }
 ];
 
 function loadQuiz() {
     const container = document.getElementById('quiz-container');
+    container.innerHTML = '';
     questions.forEach((q, i) => {
         const qBlock = document.createElement('div');
         qBlock.classList.add('mb-4');
-        qBlock.innerHTML = `
-            <p><strong>${i + 1}. ${q.question}</strong></p>
-            ${q.options.map((opt, idx) => `
+        let innerHTML = `<p><strong>${i + 1}. ${q.question}</strong></p>`;
+
+        if (q.type === "multiple") {
+            innerHTML += q.options.map((opt, idx) => `
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="question${i}" id="q${i}o${idx}" value="${idx}">
                     <label class="form-check-label" for="q${i}o${idx}">
                         ${opt}
                     </label>
                 </div>
-            `).join('')}
-        `;
+            `).join('');
+        } else if (q.type === "truefalse") {
+            innerHTML += `
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question${i}" id="q${i}true" value="true">
+                    <label class="form-check-label" for="q${i}true">Točno</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question${i}" id="q${i}false" value="false">
+                    <label class="form-check-label" for="q${i}false">Netočno</label>
+                </div>
+            `;
+        } else if (q.type === "text") {
+            innerHTML += `<input type="text" class="form-control mt-2" name="question${i}" id="q${i}text">`;
+        }
+
+        qBlock.innerHTML = innerHTML;
         container.appendChild(qBlock);
     });
 }
@@ -39,9 +79,19 @@ function loadQuiz() {
 function submitQuiz() {
     let score = 0;
     questions.forEach((q, i) => {
-        const selected = document.querySelector(`input[name="question${i}"]:checked`);
-        if (selected && parseInt(selected.value) === q.answer) {
-            score++;
+        if (q.type === "multiple" || q.type === "truefalse") {
+            const selected = document.querySelector(`input[name="question${i}"]:checked`);
+            if (selected) {
+                const userAnswer = q.type === "truefalse" ? (selected.value === "true") : parseInt(selected.value);
+                if (userAnswer === q.answer) {
+                    score++;
+                }
+            }
+        } else if (q.type === "text") {
+            const input = document.querySelector(`#q${i}text`);
+            if (input && input.value.trim().toLowerCase() === q.answer.toLowerCase()) {
+                score++;
+            }
         }
     });
 
