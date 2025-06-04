@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html lang="hr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kviz - Hrvački klub Lika</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hrvački klub Lika</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
+<body>
+<header class="d-flex justify-content-between align-items-center p-3 bg-light border-bottom">
+    <div class="logo">
+        <a href="index.html">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNvtFScewCnVMZJHYphHxrk0eA8D6Yo95bSQ&s" alt="Logo Lika" style="height: 60px;">
+        </a>
+    </div>
+    <nav>
+        <ul class="nav">
+            <li class="nav-item"><a href="treninzi.html" class="nav-link">Termini</a></li>
+            <li class="nav-item"><a href="kontakti.html" class="nav-link">Treneri</a></li>
+            <li class="nav-item"><a href="oprema.html" class="nav-link">Oprema</a></li>
+            <li class="nav-item"><a href="povijest.html" class="nav-link">Povijest</a></li>
+            <li class="nav-item"><a href="sport.html" class="nav-link">O sportu</a></li>
+            <li class="nav-item"><a href="kviz.html" class="nav-link">Kviz</a></li>
+        </ul>
+    </nav>
+</header>
 <body>
     <div class="container mt-5">
         <h2 class="text-center mb-4">Kviz: Koliko znaš o hrvanju?</h2>
@@ -20,7 +38,6 @@
         <footer class="mt-4 text-center">
             <p>&copy; Patrik Dujmović i Martin Filajdić</p>
         </footer>
-    </div>
 
     <script src="kviz.js"></script>
 </body>
