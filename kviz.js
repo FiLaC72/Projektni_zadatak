@@ -13,8 +13,8 @@ const questions = [
     },
     {
         type: "multiple",
-        question: "Koje od navedenog NIJE dio hrvačke opreme?",
-        options: ["Hrvačke tenisice", "Dres", "Boksačke rukavice", "Znojnik"],
+        question: "Koje od navedenog NIJE dio hrvačke opreme za trening?",
+        options: ["Hrvačke tenisice", "Dres", "Boksačke rukavice", "Majica"],
         answer: 2
     },
     {
@@ -29,7 +29,7 @@ const questions = [
     },
     {
         type: "text",
-        question: "Kako se zove prostor u kojem se održavaju hrvačka natjecanja (jednom riječju)?",
+        question: "Kako se zove prostor na kojem se održavaju hrvačka borba (jednom riječju)?",
         answer: "strunjača"
     },
     {
