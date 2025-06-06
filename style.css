@@ -27,8 +27,8 @@ header {
 
 
 footer {
-  background-color: #DF3A00;
-  color: black;
+  background-color: #FF4200;
+  color: white;
   text-align: center;
   padding: 5px 0;
   font-size: 0.9rem;
@@ -168,5 +168,3 @@ input[type="radio"]:checked + label::before {
     background-color: #DF3A00;
     border-color: #DF3A00;
 }
-
-
