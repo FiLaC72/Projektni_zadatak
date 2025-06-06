@@ -29,12 +29,12 @@ const questions = [
     },
     {
         type: "text",
-        question: "Kako se zove prostor na kojem se održavaju hrvačka borba (jednom riječju)?",
+        question: "Kako se zove prostor na kojem se održava hrvačka borba (jednom riječju)?",
         answer: "strunjača"
     },
     {
         type: "text",
-        question: "Kako se zove završna tehnika kojom hrvač može pobijediti meč bez bodova?",
+        question: "Kako se zove završna tehnika kojom hrvač može pobijediti meč?",
         answer: "tuš"
     }
 ];
