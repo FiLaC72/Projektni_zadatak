@@ -29,13 +29,31 @@ const questions = [
     },
     {
         type: "text",
-        question: "Kako se zove prostor na kojem se održava hrvačka borba (jednom riječju)?",
+        question: "Kako se zove prostor na kojem se održavaju hrvačka borba (jednom riječju)?",
         answer: "strunjača"
     },
     {
         type: "text",
-        question: "Kako se zove završna tehnika kojom hrvač može pobijediti meč?",
+        question: "Kako se zove završna tehnika kojom hrvač može pobijediti meč bez bodova?",
         answer: "tuš"
+    },
+    {
+        type: "multiple_answers",
+        question: "Koje od navedenih osobina su važne za uspješnog hrvača?",
+        options: ["Snaga", "Brzina", "Strpljenje", "Izdržljivost"],
+        answer: [0, 1, 3]
+    },
+    {
+        type: "multiple_answers",
+        question: "Koje se radnje smiju koristiti u hrvanju?",
+        options: ["Hvatovi", "Udaranje šakom", "Rušenja", "Gušenja"],
+        answer: [0, 2]
+    },
+    {
+        type: "multiple_answers",
+        question: "Što je važno za sigurno treniranje hrvanja?",
+        options: ["Zagrijavanje prije treninga", "Nošenje pravilne opreme", "Borba bez nadzora", "Poštivanje pravila"],
+        answer: [0, 1, 3]
     }
 ];
 
@@ -70,6 +88,16 @@ function loadQuiz() {
         } else if (q.type === "text") {
             innerHTML += `<input type="text" class="form-control mt-2" name="question${i}" id="q${i}text">`;
         }
+        else if (q.type === "multiple_answers") {
+            innerHTML += q.options.map((opt, idx) => `
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="question${i}" id="q${i}o${idx}" value="${idx}">
+                    <label class="form-check-label" for="q${i}o${idx}">
+                        ${opt}
+                    </label>
+                </div>
+            `).join('');
+        }
 
         qBlock.innerHTML = innerHTML;
         container.appendChild(qBlock);
@@ -90,6 +118,14 @@ function submitQuiz() {
         } else if (q.type === "text") {
             const input = document.querySelector(`#q${i}text`);
             if (input && input.value.trim().toLowerCase() === q.answer.toLowerCase()) {
+                score++;
+            }
+        }
+        else if (q.type === "multiple_answers") {
+            const selected = document.querySelectorAll(`input[name="question${i}"]:checked`);
+            const userAnswers = Array.from(selected).map(el => parseInt(el.value)).sort();
+            const correctAnswers = q.answer.slice().sort();
+            if (JSON.stringify(userAnswers) === JSON.stringify(correctAnswers)) {
                 score++;
             }
         }
