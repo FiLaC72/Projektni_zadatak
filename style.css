@@ -108,7 +108,12 @@ font-weight: bold;
 }
 
 h3{
-text-align: center;
+  text-align: center;
+  color: #DF3A00;
+}
+h2{
+  text-align: center;
+  color: #DF3A00;
 }
 
 .insta {
