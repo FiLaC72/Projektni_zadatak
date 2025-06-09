@@ -30,12 +30,12 @@ const questions = [
     {
         type: "text",
         question: "Kako se zove prostor na kojem se održava hrvačka borba (jednom riječju)?",
-        answer: "strunjača"
+        answer: ["strunjača", "strunjaca", "Strunjača", "Strunjaca"]
     },
     {
         type: "text",
         question: "Kako se zove završna tehnika kojom hrvač može pobijediti meč?",
-        answer: "tuš"
+        answer: ["tuš", "tus", "Tuš", "Tus"]
     },
     {
         type: "multiple_answers",
